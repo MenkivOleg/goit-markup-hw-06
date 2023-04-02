@@ -45,6 +45,20 @@ img {
   list-style: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*========================Components========================*/
 
 .visually-hidden {
@@ -627,6 +641,7 @@ img {
   margin-bottom: 24px;
   background: #e7e9fc;
   border-radius: 50%;
+  outline: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: border-color var(--transition-var);
 }
@@ -702,6 +717,7 @@ img {
 
 .input-wrap {
   position: relative;
+  margin-top: 4px;
 }
 
 .modal-input:focus,
@@ -728,4 +744,63 @@ img {
 .modal-textarea:focus,
 .modal-textarea:hover {
   border-color: var(--hover-color);
+}
+
+.check-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: var(--company-logo-color);
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.check-text span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  transition: var(--transition-var);
+}
+
+.modal-check:checked + .check-text span {
+  background-color: var(--hover-color);
+  border: none;
+  fill: var(--background-modal);
+}
+
+.modal-check:focus + .check-text span,
+.modal-check:hover + .check-text span {
+  border-color: var(--hover-color);
+}
+
+.button-send {
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  color: var(--white-color);
+  display: block;
+  margin: 0 auto;
+  padding: 16px 32px;
+  height: 56px;
+  width: 169px;
+  margin-top: 24px;
+  border: none;
+}
+
+.button-send:hover,
+.button-send:focus {
+  background-color: var(--hover-color);
+  cursor: pointer;
 }
