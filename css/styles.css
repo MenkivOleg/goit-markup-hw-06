@@ -551,9 +551,10 @@ img {
 }
 
 /* ======================================== */
-.social-list-title {
+.social-list-title,
+.sub-list {
   margin-bottom: 16px;
-
+  text-align: start;
   font-weight: 500;
   line-height: calc(24 / 16);
   color: var(--white-color);
@@ -563,8 +564,11 @@ img {
   gap: 16px;
 }
 
+.social-links {
+  margin-right: 80px;
+}
 .social-list-link {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--accent-color);
   transition: var(--transition-var);
 }
 
@@ -608,7 +612,7 @@ img {
 
 .modal {
   width: 408px;
-  min-height: 584px;
+  min-height: 576px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -746,6 +750,12 @@ img {
   border-color: var(--hover-color);
 }
 
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgb(99 111 106 / 50%);
+}
 .check-text {
   font-weight: 400;
   font-size: 12px;
@@ -803,4 +813,75 @@ img {
 .button-send:focus {
   background-color: var(--hover-color);
   cursor: pointer;
+}
+
+/* =========================SUBSCRIBE============================ */
+.subscribe-box {
+  display: block;
+}
+
+.form-elements {
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+}
+
+.form-button-container,
+.form-subscribe {
+  position: relative;
+  margin-left: 24px;
+}
+
+.subscribe-button {
+  padding: 8px 64px 8px 24px;
+  height: 40px;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: var(--transition-var);
+}
+
+.form-button-container .icon {
+  position: absolute;
+  top: 8px;
+  right: 24px;
+  pointer-events: none;
+  fill: var(--white-color);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--hover-color);
+}
+
+.form-subscribe .mail {
+  color: var(--white-color);
+}
+
+.form-subscribe .mail::placeholder {
+  color: var(--white-color);
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.form-subscribe .mail {
+  padding: 8px 16px;
+  height: 40px;
+  width: 264px;
+  color: var(--white-color);
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  border: 1px solid var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
 }
