@@ -826,11 +826,14 @@ img {
   align-items: center;
 }
 
-.form-button-container,
+.form-button-container {
+  position: relative;
+  margin-left: 24px;
+}
+
 .form-subscribe {
   position: relative;
 }
-
 .subscribe-button {
   padding: 8px 64px 8px 24px;
   height: 40px;
